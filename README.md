@@ -1,4 +1,4 @@
 fairy
 =====
 
-Fairy Engine
+Fairy Engine v0.5
