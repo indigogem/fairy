@@ -1,0 +1,22 @@
+[S3E] 
+DispFixRot=FixedLandscape
+SysGlesVersion=1
+
+IOSDispScaleFactor = 200
+
+SysAppNeverSleep = 1
+
+[GX]
+DisplayFramerate=1
+Rasterisation=HW
+
+[RESMANAGER]
+# Change this line to test derbhs in windows
+# If 1, enable building of resources (conversion of text-format resources into binary assets), 
+# 0 to disable resource building and only load binary assets. Default is 1 for debug configurations, 0 for release configurations
+#ResBuild=1    
+#LoadFromDerbh=0
+
+[UTIL]
+#MaxAllocationWarning=0
+MemMgrMaxAllocWarning=0

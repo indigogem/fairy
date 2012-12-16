@@ -1,0 +1,54 @@
+<?xml version="1.0" ?>
+<scene w="960" h="640" init_cam_x="0" init_cam_y="0">
+	<!--we could include templates to common objects-->
+	<include path="levels/template.xml" />
+	
+	<!--create regular object-->
+    <object name="obj1" type="CGameObject" is_active="0" is_visible="1" x="100" y="100" z="7" rot="0" >
+		<sprites>
+			<sprite tex="elems" x="0.000000" y="0.000000" w="52.000000" h="26.000000" tx="161" ty="270" th="27" tw="53" blend_mode="4" flip_h="0" flip_v="0" />
+		</sprites>
+		<!--if you add physics you could add here phys body and load it in object-->
+		<!-- for example something for box2d
+		<physbody>
+			<bodydef type="b2_staticBody" isFixedRotation="0" isBullet="0" isAllowSleep="1" />
+			<bodyshape type="polygon">
+				<vertices>
+					<vertex x="0.5" y="0.5" />
+					<vertex x="50.5" y="0.5" />
+					<vertex x="50.5" y="24.5" />
+					<vertex x="0.5" y="24.5" />
+				</vertices>
+			</bodyshape>
+			<fixture density="2000.000000" restitution="0.100000" friction="0.700000" categoryBits="0x0002" maskBits="0xFFFF" groupIndex="0" />
+		</physbody>
+		-->
+	</object>
+	
+	<!--create object from template (need specify type tho)-->
+	<object name="obj2" type="CGameObject" x="200" y="200" template="obj_template"/>
+	
+	<!--create some animated sprite(start play animation in game)-->
+	<object name="anim_obj" type="CGameObject" is_active="0" is_visible="1" x="200" y="250" z="8" rot="0" >
+		<sprites>
+			<sprite name="anim" tex="fairy_pong" x="-64.000000" y="-60.000000" w="128.000000" h="120.000000" tx="0" ty="0" tw="128" th="120" blend_mode="4" flip_h="0" flip_v="0" is_animation="1" fps="15" frames="4" is_loop="1" />
+		</sprites>
+	</object>
+	
+	<!--create compound object(it could contain alot of sprites in local coordinates to manipulate i.e. body parts or animations(show/hide them on animation switch), and use them as one object)-->
+	<!-- also rotated a bit -->
+	<object name="comp_obj" type="CGameObject" is_active="0" is_visible="1" x="100" y="500" z="7" rot="10" >
+		<sprites>
+			<sprite name="part1" tex="elems" x="0.000000" y="0.000000" w="52.000000" h="26.000000" tx="161" ty="270" th="27" tw="53" blend_mode="4" flip_h="0" flip_v="0" />
+			<sprite name="part2" tex="elems" x="20.000000" y="20.000000" w="52.000000" h="26.000000" tx="161" ty="270" th="27" tw="53" blend_mode="4" flip_h="0" flip_v="0" />
+		</sprites>
+	</object>
+	
+	<object name="particles_obj" type="CParticleSystem" is_active="0" is_visible="1" x="200.000000" y="250.000000" z="7" rot="0.000000">
+		<sprites>
+			<sprite tex="particles" x="0.000000" y="0.000000" w="16.000000" h="16.000000" tx="64" ty="0" tw="32" th="32" blend_mode="2" flip_h="0" flip_v="0" />
+		</sprites>
+		<psi emission="50" lifetime="-1" particleLifeMin="0.100000" particleLifeMax="5.000000" direction="0.000000" spread="6.200000" relative="1" speedMin="1.000000" speedMax="5.000000" gravityMin="3.000000" gravityMax="5.000000" radialAccelMin="1.000000" radialAccelMax="1.000000" tangentialAccelMin="1.000000" sizeStart="2.000000" sizeEnd="0.000000" sizeVar="0.000000" spinStart="0.000000" spinEnd="0.000000" spinVar="0.000000" colColorStart="0xFFFFFFFF" colColorEnd="0x00FFFFFF" colorVar="0.000000" alphaVar="1.000000" />
+	</object>
+
+</scene>

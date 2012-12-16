@@ -1,0 +1,68 @@
+defines
+{
+}
+
+options 
+{ 
+	s3e-data-dir="data" 
+	arm-cpu=6
+	arm-fpu=1
+} 
+
+includepath ../engine/source
+  
+files 
+{ 
+	(source) 
+	[src]
+	main.cpp 	
+	game.cpp
+	game_state_play.cpp
+	game_states.cpp
+	
+	[inc]	
+	game.h
+	game_state_play.h
+	game_states.h
+} 
+
+subprojects 
+{ 
+	../engine/engine.mkf
+}
+
+librarys
+{
+}
+
+librarypaths
+{
+}
+ 
+deployments
+{
+	["Default"]
+	caption="fairy"
+	name='fairy'
+	long-caption="fairy"
+	#auto-derbh	
+
+	["artbuild"]
+	win32
+	assets=artbuild
+	caption='fairy'
+	version-minor=1
+	version-revision=0
+}
+
+assets
+{
+	[default]
+	
+	(data-ram/data-gles1)
+	res.group.bin
+		
+	[artbuild]
+	(data)
+	.
+}

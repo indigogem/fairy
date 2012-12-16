@@ -1,0 +1,5 @@
+<template name="obj_template" type="CGameObject" is_active="0" is_visible="1" x="200" y="200" z="7" rot="0" >
+	<sprites>
+		<sprite tex="elems" x="0.000000" y="0.000000" w="52.000000" h="26.000000" tx="161" ty="270" th="27" tw="53" blend_mode="4" flip_h="0" flip_v="0" />
+	</sprites>
+</template>

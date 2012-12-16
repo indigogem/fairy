@@ -1,0 +1,53 @@
+define IW_USE_LEGACY_MODULES
+
+includepaths 
+{
+}
+  
+files 
+{ 
+	(source) 
+	[src]
+	sprite.cpp
+	level.cpp
+	renderer.cpp
+	game_object.cpp
+	particle.cpp
+	app.cpp
+	spline.cpp
+	
+	[inc]	
+	defs.h
+	app.h
+	sprite.h
+	level.h
+	renderer.h
+	game_object.h
+	particle.h
+	smartptr.h
+	spline.h
+} 
+
+package 
+{
+	tinyxml
+}
+
+librarys
+{
+}
+ 
+librarypaths
+{
+}
+  
+subprojects 
+{ 
+	iwgx
+	iwutil 
+	iwresmanager
+	tinyxml
+	derbh
+	iwgxfont
+}
+ 
