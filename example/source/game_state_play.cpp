@@ -71,7 +71,7 @@ void CGamePlay::OnKeyboardChar( s3eWChar ch )
 
 void CGamePlay::OnPush()
 {
-	// when we enter state - do some init stuff, i.e. show/hide some gui
+	// when we enter state - do some init stuff, i.e. show/hide some gui, load level
 	LoadLevel("./levels/level.xml");
 
 	// get animated sprite from object and start play animation
@@ -83,6 +83,8 @@ void CGamePlay::OnPush()
 
 	mFairy = animObj;
 
+	// to create particles you can use Haaf's game engine paticleed (for example https://github.com/kvakvs/hge/tree/master/tools/particleed)
+	// and use those parameters
 	mDust = mLevel->GetObjByName("particles_obj");
 
 	mBrick = mLevel->GetObjByName("comp_obj");
